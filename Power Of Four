@@ -1,0 +1,9 @@
+var isPowerOfFour = function(n) {
+    if( n <= 0 )
+        return false;
+    let bool;
+    if(n == 1)
+        return true;
+    n % 4 == 0 ? bool = true : bool = false;
+    return bool;
+};
