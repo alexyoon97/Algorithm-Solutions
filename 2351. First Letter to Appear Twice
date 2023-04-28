@@ -1,0 +1,13 @@
+/**
+ * @param {string} s
+ * @return {character}
+ */
+var repeatedCharacter = function(s) {
+    let arr = [];
+    for(let i of s){
+        if(!arr.includes(i))
+            arr.push(i)
+        else
+            return i
+    }
+};
