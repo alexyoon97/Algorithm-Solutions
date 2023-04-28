@@ -1,0 +1,22 @@
+/**
+ * @param {string[]} words
+ * @param {string} chars
+ * @return {number}
+ */
+var countCharacters = function (words, chars) {
+    if(words.length <= 1 || words.length >= 1000 || chars.length >= 100)
+        return 0;
+    let count = 0;
+    let temp = chars;
+    for (let i in words) {
+        if(words[i].length <= 1)
+            return 0;
+        let flag;
+        for (let y in words[i]) {
+            if (!temp.includes(words[i][y])) {flag = false;break;}
+            else {flag = true;temp.replace(words[i][y],'')}
+        }
+        if (flag) { count += words[i].length; }
+    }
+    return count;
+};
